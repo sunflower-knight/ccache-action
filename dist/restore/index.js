@@ -59418,7 +59418,7 @@ async function configure(ccacheVariant) {
         await execBash("ccache -p");
     }
     else {
-        const options = `SCCACHE_IDLE_TIMEOUT=0 SCCACHE_DIR='${ghWorkSpace}'\\.sccache SCCACHE_CACHE_SIZE='${maxSize}'`;
+        const options = `SCCACHE_IDLE_TIMEOUT=0 SCCACHE_DIR='${ghWorkSpace}\\.sccache' SCCACHE_CACHE_SIZE='${maxSize}'`;
         await execBash(`env ${options} sccache --start-server`);
     }
 }
